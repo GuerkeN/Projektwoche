@@ -1,9 +1,12 @@
+int x = 0;
 
-
-void setup(){
-  size (1800,980); 
+void setup() {
+  fullScreen();
   background(0,150,0);
+  noStroke();
+  fill(102);
 }
+
 
 void draw(){
   fill(50,50,50);
