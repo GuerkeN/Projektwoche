@@ -13,7 +13,7 @@ this.schritte = schritte;
 }
 
 void zeichneAuto(){
-  rect(track,height-150,durchmesser,durchmesser);
+  rect(track,height -150,durchmesser,durchmesser);
 }
 
 public float getTrack(){
