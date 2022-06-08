@@ -41,7 +41,7 @@ void draw(){
       ellipse(width/1.35, y ,50 ,50);
       y= y + 1;
       
-      rect(a.getTrack(),height-150,a.getDurchmesser(),a.getDurchmesser());
+      a.zeichneAuto();
 }
 
 

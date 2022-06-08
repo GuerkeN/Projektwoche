@@ -12,6 +12,10 @@ this.durchmesser = durchmesser;
 this.schritte = schritte;
 }
 
+void zeichneAuto(){
+  rect(track,height-150,durchmesser,durchmesser);
+}
+
 public float getTrack(){
   return track; 
 }
@@ -20,9 +24,6 @@ public void setTrack(float track){
   this.track = track; 
  }
 
-public int getDurchmesser(){
-  return durchmesser;
-}
 
 public int getSchritte(){
   return schritte;
