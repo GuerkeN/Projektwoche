@@ -12,7 +12,7 @@ void setup() {
   fill(102);
    h = new HintergrundObjekte (width,0,-600,15,300);
    a = new Auto(width/1.8,height-180,115,250);
-   g = new Hindernisse(width,0,100);
+   g = new Hindernisse(width,0,115);
 }
 
 void draw(){
@@ -21,17 +21,18 @@ void draw(){
   rect(boarder,0,width-boarder*2,height);
   
   
+  
    fill(255,255,255);
    
    rect(width/5.5,0,7,height);
    
-  h.zeichneStreifen();
+    h.zeichneStreifen();
    
    rect(width -width/5.5,0,7,height);
    
     g.zeichneGegner();
       
-      a.zeichneAuto();
+    a.zeichneAuto();
       
 }
 

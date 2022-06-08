@@ -25,13 +25,13 @@ class Hindernisse{
     
     gPos[0] = xpos/3.75;
     gPos[1] = xpos/2.35;
-    gPos[2] = xpos/1.7;
-    gPos[3] = xpos/1.35;
+    gPos[2] = xpos/1.8;
+    gPos[3] = xpos/1.4;
     
   }
   
   void zeichneGegner(){
-     
+    
         
       rect(gPos[f], ypos ,durchmesser ,durchmesser);
       ypos= ypos + 5;
@@ -51,6 +51,8 @@ class Hindernisse{
            g = random.nextInt(0,4);
            h = random.nextInt(0,4);
          }
+         
+
   }
 
 }
