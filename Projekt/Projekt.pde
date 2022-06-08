@@ -1,17 +1,20 @@
- Auto a = new Auto(1500/1.8,115,250);  
+ Auto a; 
+ HintergrundObjekte h;
  int y = 100;
+ int i = 3;
    
 void setup() {
-  size(1500,950);
+  size(1440,900);
   background(0,150,0);
   noStroke();
-  fill(102);  
+  fill(102);
+  h = new HintergrundObjekte (width,0,-600,15,300);
+   a = new Auto(width/1.8,115,250);
 }
 
 void draw(){
   fill(50,50,50);
   int boarder = 200;
-  int middleStripeLenght = 300;
   rect(boarder,0,width-boarder*2,height);
   
   
@@ -19,13 +22,7 @@ void draw(){
    
    rect(width/5.5,0,7,height);
    
-   rect(width/2,height/1.5,15,middleStripeLenght);
-   rect(width/3,height/1.5,15,middleStripeLenght);
-   rect(width/1.5,height/1.5,15,middleStripeLenght);
-   
-   rect(width/2,height/8,15,middleStripeLenght);
-   rect(width/3,height/8,15,middleStripeLenght);
-   rect(width/1.5,height/8,15,middleStripeLenght);
+  h.zeichneStreifen();
    
    rect(width -width/5.5,0,7,height);
    
@@ -47,18 +44,32 @@ void draw(){
 
 
 
+
 void keyPressed(){
 
-if(keyCode == UP){
 
-a.setTrack(a.getTrack() - a.getSchritte());
+  if(keyCode == LEFT){
+      if(i <= 1) {
+    a.setTrack(a.getTrack());
+      } else {
+    a.setTrack(a.getTrack() - a.getSchritte());
+    i = i - 1;
+   }  
+  }
 
-}
 
-if(keyCode == DOWN){
-
-a.setTrack(a.getTrack() + a.getSchritte());
-
-}
-
-}
+  if(keyCode == RIGHT){
+    if(i >= 4) {
+    a.setTrack(a.getTrack());
+    } else {
+    a.setTrack(a.getTrack() + a.getSchritte());
+   i = i + 1;
+   } 
+  } 
+  
+  
+  
+  if (keyCode == SHIFT) noLoop();
+  if(keyCode==ALT) loop();
+  
+} 
