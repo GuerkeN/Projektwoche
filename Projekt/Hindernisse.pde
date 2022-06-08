@@ -6,6 +6,7 @@ class Hindernisse{
   private float ypos;
   private float durchmesser;
   private float [] gPos = new float[4];
+  
   Random random = new Random ();
   int f = random.nextInt(0,4);
   int g = random.nextInt(0,4);
@@ -33,6 +34,7 @@ class Hindernisse{
         
       ellipse(gPos[f], ypos ,durchmesser ,durchmesser);
       ypos= ypos + 5;
+      
      
       
       ellipse(gPos[g], ypos ,durchmesser ,durchmesser);
@@ -42,7 +44,13 @@ class Hindernisse{
       ellipse(gPos[h], ypos ,durchmesser ,durchmesser);
       ypos= ypos + 5;
   
-      
+         if (ypos >= height){
+         ypos = ypos-height-durchmesser;
+           f = random.nextInt(0,4);
+           g = random.nextInt(0,4);
+           h = random.nextInt(0,4);
+         }
+
 
      
   }
