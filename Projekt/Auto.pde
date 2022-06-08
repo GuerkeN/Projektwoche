@@ -16,6 +16,10 @@ public float getTrack(){
   return track; 
 }
 
+public void setTrack(float track){
+  this.track = track; 
+ }
+
 public int getDurchmesser(){
   return durchmesser;
 }
@@ -24,8 +28,6 @@ public int getSchritte(){
   return schritte;
 }
 
-public void setSchritte(int schritte){
-  this.schritte = schritte; 
- }
+
 
 }

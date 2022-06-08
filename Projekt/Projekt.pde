@@ -41,7 +41,7 @@ void draw(){
       ellipse(width/1.35, y ,50 ,50);
       y= y + 1;
       
-      rect(a.getSchritte(),height-150,a.getDurchmesser(),a.getDurchmesser());
+      rect(a.getTrack(),height-150,a.getDurchmesser(),a.getDurchmesser());
 }
 
 
@@ -51,13 +51,13 @@ void keyPressed(){
 
 if(keyCode == UP){
 
-a.setSchritte(a.getSchritte() - 250);
+a.setTrack(a.getTrack() - a.getSchritte());
 
 }
 
 if(keyCode == DOWN){
 
-a.setSchritte(a.getSchritte() + 250);
+a.setTrack(a.getTrack() + a.getSchritte());
 
 }
 
