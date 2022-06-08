@@ -26,8 +26,8 @@ void zeichneStreifen(){
    rect(xpos/1.5,ypos2,mittelstreifenDicke,middleStripeLenght);
    
    
-   ypos = ypos + 25;
-   ypos2 = ypos2 + 25;
+   ypos = ypos + (25*0.75);
+   ypos2 = ypos2 + (25*0.75);
 
    
    if (ypos >= height){

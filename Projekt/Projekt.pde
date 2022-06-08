@@ -1,5 +1,7 @@
  Auto a; 
  HintergrundObjekte h;
+ Hindernisse g;
+ 
  int y = 100;
  int i = 3;
    
@@ -8,8 +10,9 @@ void setup() {
   background(0,150,0);
   noStroke();
   fill(102);
-  h = new HintergrundObjekte (width,0,-600,15,300);
+   h = new HintergrundObjekte (width,0,-600,15,300);
    a = new Auto(width/1.8,115,250);
+   g = new Hindernisse(width,100,50);
 }
 
 void draw(){
@@ -26,17 +29,7 @@ void draw(){
    
    rect(width -width/5.5,0,7,height);
    
-      ellipse(width/ 3.75, y ,50 ,50);
-      y= y + 1;
-      
-      ellipse(width/ 2.35, y ,50 ,50);
-      y= y + 1;
-      
-      ellipse(width/ 1.7, y ,50 ,50);
-      y= y + 1;
-      
-      ellipse(width/1.35, y ,50 ,50);
-      y= y + 1;
+    g.zeichneGegner();
       
       a.zeichneAuto();
 }
