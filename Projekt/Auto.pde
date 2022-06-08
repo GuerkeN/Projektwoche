@@ -1,23 +1,24 @@
-Hindernisse Hindernisse;
 
 class Auto {
 
 
 
   private float track;
+  private float ypos;
   private int durchmesser;
   private int schritte;
 
 
 
-  public Auto(float track, int durchmesser, int schritte) {
+  public Auto(float track,float ypos, int durchmesser, int schritte) {
     this.track = track;
+    this.ypos = ypos;
     this.durchmesser = durchmesser;
     this.schritte = schritte;
   }
 
   void zeichneAuto() {
-    rect(track, height -150, durchmesser, durchmesser);
+    rect(track, ypos, durchmesser, durchmesser);
   }
 
   public float getTrack() {
@@ -33,9 +34,7 @@ class Auto {
     return schritte;
   }
 
-//  void death () {
 
-// if (dist(track,schritte,Hindernisse.xpos,Hindernisse.ypos)<125){
-// background (255,0,0);}
-//}
+
+
   }

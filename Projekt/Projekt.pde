@@ -11,8 +11,8 @@ void setup() {
   noStroke();
   fill(102);
    h = new HintergrundObjekte (width,0,-600,15,300);
-   a = new Auto(width/1.8,115,250);
-   g = new Hindernisse(width,100,50);
+   a = new Auto(width/1.8,height-180,115,250);
+   g = new Hindernisse(width,0,100);
 }
 
 void draw(){
@@ -33,7 +33,6 @@ void draw(){
       
       a.zeichneAuto();
       
-      a.death();
 }
 
 

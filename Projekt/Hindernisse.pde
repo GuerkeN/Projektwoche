@@ -2,6 +2,7 @@ import java.util.*;
 
 class Hindernisse{
   
+  
    float xpos;
    float ypos;
   private float durchmesser;
@@ -32,16 +33,16 @@ class Hindernisse{
   void zeichneGegner(){
      
         
-      ellipse(gPos[f], ypos ,durchmesser ,durchmesser);
+      rect(gPos[f], ypos ,durchmesser ,durchmesser);
       ypos= ypos + 5;
       
      
       
-      ellipse(gPos[g], ypos ,durchmesser ,durchmesser);
+      rect(gPos[g], ypos ,durchmesser ,durchmesser);
       ypos= ypos + 5;
   
       
-      ellipse(gPos[h], ypos ,durchmesser ,durchmesser);
+      rect(gPos[h], ypos ,durchmesser ,durchmesser);
       ypos= ypos + 5;
   
          if (ypos >= height){
@@ -50,8 +51,6 @@ class Hindernisse{
            g = random.nextInt(0,4);
            h = random.nextInt(0,4);
          }
-
-
-     
   }
+
 }
