@@ -32,6 +32,8 @@ void draw(){
     g.zeichneGegner();
       
       a.zeichneAuto();
+      
+      a.death();
 }
 
 

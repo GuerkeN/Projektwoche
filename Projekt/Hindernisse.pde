@@ -2,8 +2,8 @@ import java.util.*;
 
 class Hindernisse{
   
-  private float xpos;
-  private float ypos;
+   float xpos;
+   float ypos;
   private float durchmesser;
   private float [] gPos = new float[4];
   
@@ -46,7 +46,7 @@ class Hindernisse{
   
          if (ypos >= height){
          ypos = ypos-height-durchmesser;
-           f = random.nextInt(0,4);
+            f = random.nextInt(0,4);
            g = random.nextInt(0,4);
            h = random.nextInt(0,4);
          }
@@ -54,22 +54,4 @@ class Hindernisse{
 
      
   }
-  
-  
-  /* public float[] getXpos(float[]gPos, float xpos){
-    print(xpos);
-    
-    gPos[0] = xpos/3.75;
-    gPos[1] = xpos/2.35;
-    gPos[2] = xpos/1.7;
-    gPos[3] = xpos/1.35;
-    
-    return gPos; 
-  } */
-  
-  
-  
-  
-  
-  
 }
