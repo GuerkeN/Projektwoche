@@ -1,5 +1,6 @@
-  int y = 100;
-  float i = 1500/1.8;
+ Auto a = new Auto(1500/1.8,115,250);  
+ int y = 100;
+   
 void setup() {
   size(1500,950);
   background(0,150,0);
@@ -40,7 +41,7 @@ void draw(){
       ellipse(width/1.35, y ,50 ,50);
       y= y + 1;
       
-      rect(i,height-150,115,115);
+      rect(a.getSchritte(),height-150,a.getDurchmesser(),a.getDurchmesser());
 }
 
 
@@ -50,13 +51,13 @@ void keyPressed(){
 
 if(keyCode == UP){
 
-i = i - 250;
+a.setSchritte(a.getSchritte() - 250);
 
 }
 
 if(keyCode == DOWN){
 
-i = i + 250;
+a.setSchritte(a.getSchritte() + 250);
 
 }
 
