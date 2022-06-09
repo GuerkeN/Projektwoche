@@ -4,6 +4,8 @@ class Death {
 
    if (a.track == g.gPos[g.f] && a.ypos <= g.ypos+125){
    background(150,0,0);
+   
+   
    noLoop();
    }
  

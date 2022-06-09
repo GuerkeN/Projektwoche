@@ -2,7 +2,7 @@ import java.util.*;
 
 class Hindernisse{
   
-  
+   int counter = 0;
    float xpos;
    float ypos;
   private float durchmesser;
@@ -46,9 +46,13 @@ class Hindernisse{
             f = random.nextInt(0,4);
            g = random.nextInt(0,4);
            h = random.nextInt(0,4);
-         }  
+           counter++;
+         }    
+     }  
 
-  }
+ 
+  
+
   
 
 

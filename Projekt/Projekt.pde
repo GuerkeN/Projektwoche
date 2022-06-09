@@ -25,9 +25,10 @@ void draw(){
     h.zeichneStreifen();
     a.zeichneAuto();
     if (t.getTime() >= 3){
-    g.zeichneGegner(); 
+      g.zeichneGegner(); 
     }
    d.screen();
+
     
   rect(width-185, 10, 170, 25);
   noStroke();
@@ -36,6 +37,7 @@ void draw(){
   textSize(20);
   int time = round(t.getTime());
   text ("Your Time: " + time + " s." , width-180, 30);
+  text ("Your Points: " + g.counter , width-180, 60);
   
     
 
