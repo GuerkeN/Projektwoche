@@ -34,15 +34,12 @@ class Hindernisse{
     
         
       rect(gPos[f], ypos ,durchmesser ,durchmesser);
-      ypos= ypos + 5;
-      
-      
+   
       rect(gPos[g], ypos ,durchmesser ,durchmesser);
-      ypos= ypos + 5;
-  
       
       rect(gPos[h], ypos ,durchmesser ,durchmesser);
-      ypos= ypos + 5;
+      
+      ypos= ypos + 20;
   
          if (ypos >= height){
          ypos = ypos-height-durchmesser;
@@ -53,26 +50,6 @@ class Hindernisse{
 
   }
   
-  void screen(){
-   if (a.track == gPos[f] && a.ypos <= ypos+125){
-   background(150,0,0);
-   noLoop();
- }
- 
-  if (a.track == gPos[g] && a.ypos <= ypos+125){
-   background(150,0,0);
-   noLoop();
- }
- 
-  if (a.track == gPos[h] && a.ypos <= ypos+125){
-   background(150,0,0);
-   noLoop();
- }
-  
-  
-  
-  
-  
-  }
+
 
 }

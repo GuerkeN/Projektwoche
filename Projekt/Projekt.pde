@@ -3,6 +3,7 @@
  Hindernisse g;
  Hintergrund k;
  Timer t;
+ Death d;
  
  int i = 3;
    
@@ -11,19 +12,22 @@ void setup() {
   size(1440,900);
   fill(102);
   k = new Hintergrund (200);
-   h = new HintergrundObjekte (width, 0, -250, -500, -750, 15, 100, 20);
+   h = new HintergrundObjekte (width, 0, -250, -500, -750, 15, 100, 15);
    a = new Auto(width/1.8,height-180,115,250);
-   g = new Hindernisse(width,0,115);
+   g = new Hindernisse(width,-115,115);
    t = new Timer (0);
+   d = new Death();
 }
 
 void draw(){
   k.machHintergrund();
     h.zeichneSeitenStreifen();
     h.zeichneStreifen();
-    g.zeichneGegner(); 
     a.zeichneAuto();
-    g.screen();
+    if (t.getTime() >= 3){
+    g.zeichneGegner(); 
+    }
+   d.screen();
     
   rect(width-185, 10, 170, 25);
   noStroke();
