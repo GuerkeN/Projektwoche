@@ -4,6 +4,7 @@
  Hintergrund k;
  Timer t;
  Death d;
+ Score s;
  
  int i = 3;
    
@@ -17,6 +18,7 @@ void setup() {
    g = new Hindernisse(width,-115,115);
    t = new Timer (0);
    d = new Death();
+   s = new Score();
 }
 
 void draw(){
@@ -24,21 +26,22 @@ void draw(){
     h.zeichneSeitenStreifen();
     h.zeichneStreifen();
     a.zeichneAuto();
+    s.scoreCounter();
+    
+    
     if (t.getTime() >= 3){
       g.zeichneGegner(); 
     }
    d.screen();
+   
+   /*t.countDown();
+   int timeDown = round(t.getTime());
+   if (timeDown <= 3){
 
-    
-  rect(width-185, 10, 170, 25);
-  noStroke();
-  fill (150, 0, 190);
-  t.countUp();
-  textSize(20);
-  int time = round(t.getTime());
-  text ("Your Time: " + time + " s." , width-180, 30);
-  text ("Your Points: " + g.counter , width-180, 60);
-  
+   textSize(250);
+   text (timeDown, width/2,height/2);
+   }
+   */
     
 
 }
