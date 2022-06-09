@@ -1,39 +1,40 @@
  Auto a; 
  HintergrundObjekte h;
  Hindernisse g;
+ Hintergrund k;
+ Timer t;
  
- int y = 100;
  int i = 3;
    
 void setup() {
+  frameRate (60);
   size(1440,900);
-  background(0,150,0);
-  noStroke();
   fill(102);
-   h = new HintergrundObjekte (width,0,-600,15,300);
+  k = new Hintergrund (200);
+   h = new HintergrundObjekte (width, 0, -250, -500, -750, 15, 100, 20);
    a = new Auto(width/1.8,height-180,115,250);
    g = new Hindernisse(width,0,115);
+   t = new Timer (0);
 }
 
 void draw(){
-  fill(50,50,50);
-  int boarder = 200;
-  rect(boarder,0,width-boarder*2,height);
-  
-  
-  
-   fill(255,255,255);
-   
-   rect(width/5.5,0,7,height);
-   
+  k.machHintergrund();
+    h.zeichneSeitenStreifen();
     h.zeichneStreifen();
-   
-   rect(width -width/5.5,0,7,height);
-   
-    g.zeichneGegner();
-      
+    g.zeichneGegner(); 
     a.zeichneAuto();
-      
+    g.screen();
+    
+  rect(width-185, 10, 170, 25);
+  noStroke();
+  fill (150, 0, 190);
+  t.countUp();
+  textSize(20);
+  int time = round(t.getTime());
+  text ("Your Time: " + time + " s." , width-180, 30);
+  
+    
+
 }
 
 

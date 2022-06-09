@@ -23,10 +23,10 @@ class Hindernisse{
     this.ypos = ypos;
     this.durchmesser = durchmesser;
     
-    gPos[0] = xpos/3.75;
-    gPos[1] = xpos/2.35;
+    gPos[0] = 300;
+    gPos[1] = 550;
     gPos[2] = xpos/1.8;
-    gPos[3] = xpos/1.4;
+    gPos[3] = 1050;
     
   }
   
@@ -36,7 +36,6 @@ class Hindernisse{
       rect(gPos[f], ypos ,durchmesser ,durchmesser);
       ypos= ypos + 5;
       
-     
       
       rect(gPos[g], ypos ,durchmesser ,durchmesser);
       ypos= ypos + 5;
@@ -50,9 +49,30 @@ class Hindernisse{
             f = random.nextInt(0,4);
            g = random.nextInt(0,4);
            h = random.nextInt(0,4);
-         }
-         
+         }  
 
+  }
+  
+  void screen(){
+   if (a.track == gPos[f] && a.ypos <= ypos+125){
+   background(150,0,0);
+   noLoop();
+ }
+ 
+  if (a.track == gPos[g] && a.ypos <= ypos+125){
+   background(150,0,0);
+   noLoop();
+ }
+ 
+  if (a.track == gPos[h] && a.ypos <= ypos+125){
+   background(150,0,0);
+   noLoop();
+ }
+  
+  
+  
+  
+  
   }
 
 }
