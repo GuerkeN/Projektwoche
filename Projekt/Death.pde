@@ -11,10 +11,13 @@ class Death {
       textAlign(CENTER, CENTER);
       text("Game Over", width/2, height/2);
       textAlign(CENTER, TOP);
-      text("Your Score: " + g.counter*100, width/2, height/5);
+      text("Your Score: " + g.counter+round(t.time)*10, width/2, height/5);
       textSize(50);
-      textAlign(CENTER, TOP);
+      textAlign(CENTER, DOWN);
       text("Your Time: " + round(t.time) + "s", width/2, height/2.95);
+      textSize(30);
+      textAlign(CENTER, CENTER);
+      text("Try again with Shift ", width/2, height/1.5);
       this.died = true;
     }
 
@@ -25,10 +28,13 @@ class Death {
       textAlign(CENTER, CENTER);
       text("Game Over", width/2, height/2);
       textAlign(CENTER, TOP);
-      text("Your Score: " + g.counter*100, width/2, height/5);
+      text("Your Score: " + g.counter+round(t.time)*10, width/2, height/5);
       textSize(50);
-      textAlign(CENTER, TOP);
+      textAlign(CENTER, DOWN);
       text("Your Time: " + t.time + "s", width/2, height/2.95);
+            textSize(30);
+      textAlign(CENTER, CENTER);
+      text("Try again with Shift ", width/2, height/1.5);
       this.died = true;
     }
 
@@ -39,10 +45,13 @@ class Death {
       textAlign(CENTER, CENTER);
       text("Game Over", width/2, height/2);
       textAlign(CENTER, TOP);
-      text("Your Score: " + g.counter*100, width/2, height/5);
+      text("Your Score: " + g.counter+round(t.time)*10, width/2, height/5);
       textSize(50);
-      textAlign(CENTER, TOP);
+      textAlign(CENTER, DOWN);
       text("Your Time: " + round(t.time) + "s", width/2, height/2.95);
+      textSize(30);
+      textAlign(CENTER, CENTER);
+      text("Try again with Shift ", width/2, height/1.5);
       this.died = true;
     }
   }
@@ -58,12 +67,15 @@ class Death {
     textAlign(CENTER, CENTER);
     text("Game Over", width/2, height/2);
     textAlign(CENTER, TOP);
-    text("Your Score: " + g.counter*100, width/2, height/5);
+    text("Your Score: " + g.counter+round(t.time)*10, width/2, height/5);
     textSize(50);
     textAlign(CENTER, TOP);
     text("Your Time: " + round(t.time) + "s", width/2, height/2.95);
+          textSize(30);
+      textAlign(CENTER, CENTER);
+      text("Try again with Shift ", width/2, height/1.5);
 
-    if (keyPressed == true) {
+    if (keyCode == SHIFT) {
       this.died = false;
       start();
     }

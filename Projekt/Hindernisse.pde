@@ -2,6 +2,7 @@ import java.util.*;
 
 class Hindernisse {
 
+  float r = 1;
   int counter = 0;
   float xpos;
   float ypos;
@@ -43,15 +44,17 @@ class Hindernisse {
     rect(gPos[h], ypos, durchmesser, durchmesser);
     fill(0, 0, 200);
     rect(gPos[h]+durchmesser/4, ypos+durchmesser/2, durchmesser/2, durchmesser/2);
+    
+    ypos= ypos + 20 + 1 * r;
 
-    ypos= ypos + 20;
 
     if (ypos >= height) {
       ypos = ypos-height-durchmesser;
       f = random.nextInt(0, 4);
       g = random.nextInt(0, 4);
       h = random.nextInt(0, 4);
-      counter++;
+      counter = counter +1;
+      r = r + 1 * 0.001;
     }
   }
 }

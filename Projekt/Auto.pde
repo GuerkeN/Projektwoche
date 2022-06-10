@@ -18,9 +18,9 @@ class Auto {
   }
 
   void zeichneAuto() {
-    rect(track, ypos, durchmesser, durchmesser);
+    rect(track, ypos, durchmesser, durchmesser*1.3);
     fill(0, 0, 200);
-    rect(track+durchmesser/4, ypos, durchmesser/2, durchmesser/2);
+    rect(track+durchmesser/4, ypos, durchmesser/2, durchmesser/3);
   }
 
   public float getTrack() {

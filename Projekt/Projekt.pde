@@ -6,6 +6,8 @@ Timer t;
 Death d;
 Score s;
 
+
+
 int i = 3;
 
 void setup() {
@@ -28,7 +30,6 @@ void start() {
 
 
 void draw() {
-
   if (d.isDead() == false) {
     k.machHintergrund();
     h.zeichneSeitenStreifen();
@@ -44,7 +45,8 @@ void draw() {
   } else if (d.isDead() == true) {
     d.stayDead();
     i = 3;
-  }
+
+}
 }
 
 

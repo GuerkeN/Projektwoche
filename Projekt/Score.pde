@@ -11,7 +11,7 @@ class Score {
     fill (0, 0, 0);
     t.countUp();
     int time = round(t.getTime());
-    long counter = g.counter * 100;
+    long counter = g.counter + 10 * time;
     textAlign(TOP, RIGHT);
     textSize(20);
     text ("Your Time: " + time + " s.", x1, y1);
