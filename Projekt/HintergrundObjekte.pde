@@ -80,6 +80,13 @@ class HintergrundObjekte {
     ellipse(width-80,z+20,50,50);
     ellipse(width-55,z+20,30,30);
     
+    fill(255, 255, 255);
+    ellipse(width-55, z+20, 50, 50);
+    ellipse(width-105, z+20, 50, 50);
+    ellipse(width-75, z, 50, 50);
+    ellipse(width-80, z+20, 50, 50);
+    ellipse(width-55, z+20, 30, 30);
+    
     
     y = y + 15;
     z = z + 15;
