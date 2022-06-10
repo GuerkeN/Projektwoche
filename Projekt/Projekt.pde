@@ -12,7 +12,11 @@ void setup() {
   frameRate (60);
   size(1440,900);
   fill(102);
-  k = new Hintergrund (200);
+  start();
+}
+
+void start(){
+   k = new Hintergrund (200);
    h = new HintergrundObjekte (width, 0, -250, -500, -750, 15, 100, 15);
    a = new Auto(width/1.8,height-180,115,250);
    g = new Hindernisse(width,-115,115);
@@ -21,31 +25,27 @@ void setup() {
    s = new Score();
 }
 
+
+
 void draw(){
-  k.machHintergrund();
+    
+  if(d.isDead() == false){
+    k.machHintergrund();
     h.zeichneSeitenStreifen();
     h.zeichneStreifen();
+    h.clouds();
     a.zeichneAuto();
     s.scoreCounter();
-    
     
     if (t.getTime() >= 3){
       g.zeichneGegner(); 
     }
    d.screen();
-   
-   /*t.countDown();
-   int timeDown = round(t.getTime());
-   if (timeDown <= 3){
-
-   textSize(250);
-   text (timeDown, width/2,height/2);
-   }
-   */
-    
-
+  } else if(d.isDead() == true) {
+    d.stayDead();
+    i = 3;
+  } 
 }
-
 
 
 
@@ -71,10 +71,5 @@ void keyPressed(){
    i = i + 1;
    } 
   } 
-  
-  
-  
-  if (keyCode == SHIFT) noLoop();
-  if(keyCode==ALT) loop();
-  
+   
 } 

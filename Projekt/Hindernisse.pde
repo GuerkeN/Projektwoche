@@ -32,11 +32,11 @@ class Hindernisse{
   
   void zeichneGegner(){
     
-        
+      fill(random(255), random(255),random(255));  
       rect(gPos[f], ypos ,durchmesser ,durchmesser);
-   
+      fill(random(255),random(255),random(255));
       rect(gPos[g], ypos ,durchmesser ,durchmesser);
-      
+      fill(random(255),random(255),random(255));
       rect(gPos[h], ypos ,durchmesser ,durchmesser);
       
       ypos= ypos + 20;
