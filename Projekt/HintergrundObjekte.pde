@@ -1,7 +1,7 @@
 class HintergrundObjekte {
 
   private float y = 30;
-  private float z = -750;  
+  private float z = -750;
   private float xpos;
   private float ypos;
   private float ypos2;
@@ -63,40 +63,39 @@ class HintergrundObjekte {
     rect(width/5.5, 0, 7, height);
     rect(width -width/5.5, 0, 7, height);
   }
-  
-  void clouds(){
-    fill(255,255,255);
+
+  void clouds() {
+    fill(255, 255, 255);
     ellipse(50, y+20, 50, 50);
-    ellipse(100,y+20,50,50);
-    ellipse(75,y,50,50);
-    ellipse(75,y+20,50,50);
-    ellipse(50,y+20,30,30);
-    
-    
-    fill(255,255,255);
-    ellipse(width-55, z+20, 50, 50);
-    ellipse(width-105,z+20,50,50);
-    ellipse(width-75,z,50,50);
-    ellipse(width-80,z+20,50,50);
-    ellipse(width-55,z+20,30,30);
-    
+    ellipse(100, y+20, 50, 50);
+    ellipse(75, y, 50, 50);
+    ellipse(75, y+20, 50, 50);
+    ellipse(50, y+20, 30, 30);
+
+
     fill(255, 255, 255);
     ellipse(width-55, z+20, 50, 50);
     ellipse(width-105, z+20, 50, 50);
     ellipse(width-75, z, 50, 50);
     ellipse(width-80, z+20, 50, 50);
     ellipse(width-55, z+20, 30, 30);
-    
-    
+
+    fill(255, 255, 255);
+    ellipse(width-55, z+20, 50, 50);
+    ellipse(width-105, z+20, 50, 50);
+    ellipse(width-75, z, 50, 50);
+    ellipse(width-80, z+20, 50, 50);
+    ellipse(width-55, z+20, 30, 30);
+
+
     y = y + 15;
     z = z + 15;
-    
-    if(y >= height){
+
+    if (y >= height) {
       y = y-height*2.5;
     }
-        if(z >= height){
+    if (z >= height) {
       z = z-height*3;
     }
-    
-  } 
+  }
 }

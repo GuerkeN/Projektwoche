@@ -10,7 +10,7 @@ class Auto {
 
 
 
-  public Auto(float track,float ypos, int durchmesser, int schritte) {
+  public Auto(float track, float ypos, int durchmesser, int schritte) {
     this.track = track;
     this.ypos = ypos;
     this.durchmesser = durchmesser;
@@ -19,6 +19,8 @@ class Auto {
 
   void zeichneAuto() {
     rect(track, ypos, durchmesser, durchmesser);
+    fill(0, 0, 200);
+    rect(track+durchmesser/4, ypos, durchmesser/2, durchmesser/2);
   }
 
   public float getTrack() {
@@ -33,9 +35,4 @@ class Auto {
   public int getSchritte() {
     return schritte;
   }
-
-
-  
 }
-
-  
